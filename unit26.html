@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 26 Quiz - Essential Words Contextual Reading Hub (Book 3)</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>Unit 26: Word Bank &amp; Fill-in-the-Blank Practice</h1>
+  <p>4000 Essential Words, Book 3 - 20 words, studied then tested through context clues</p>
+</header>
+
+<main>
+  <a class="back-link" href="index.html">&larr; Back to all units</a>
+
+  <div class="student-bar">
+    <label for="student-name">Your name:</label>
+    <input type="text" id="student-name" placeholder="Type your name here" autocomplete="off">
+  </div>
+
+  <h2 class="section-heading">Part 1: Word Bank</h2>
+  <p class="section-subtext">
+    Get familiar with all 20 words before you test yourself. Each row shows the word,
+    its part of speech, an example sentence with the word in <strong>bold</strong>, and a
+    "Listen" button to hear the sentence read aloud.
+  </p>
+  <div id="wordbank-container"></div>
+
+  <h2 class="section-heading">Part 2: Fill-in-the-Blank Practice</h2>
+  <p class="section-subtext">
+    Read each passage carefully. Every blank shows the word's first letter plus one box
+    per missing letter - use the context clues in the sentence to figure out the word,
+    then type the rest of the letters. Click <strong>Check Answers</strong> when a passage
+    is complete. Correct words turn <span style="color:#1e8449; font-weight:600;">green</span>;
+    incorrect ones turn <span style="color:#c0392b; font-weight:600;">red</span> and clear
+    so you can try again. If a word is still wrong on your <strong>second</strong> try, the
+    correct spelling will be revealed in
+    <span style="color:#96690f; font-weight:600;">amber</span> so you're not stuck -
+    just make a mental note to review that word.
+  </p>
+
+  <div id="passages-container"></div>
+
+  <div class="summary-box">
+    <div id="summary">Score (first attempt): 0 / 20 correct - 0 / 20 blanks resolved so far.</div>
+    <button type="button" class="submit-btn" id="submit-btn" disabled>Submit Quiz Result</button>
+    <div class="submit-status" id="submit-status"></div>
+  </div>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/unit26-data.js"></script>
+<script src="js/wordbank.js"></script>
+<script src="js/quiz-engine.js"></script>
+<script>
+  WordBank.render(UNIT26_DATA);
+  QuizEngine.init(UNIT26_DATA);
+</script>
+</body>
+</html>
